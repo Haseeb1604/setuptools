@@ -128,8 +128,8 @@ def convert_path(pathname):
         return pathname
     if not pathname:
         return pathname
-    # if pathname[0] == '/':
-    #     raise ValueError("path '%s' cannot be absolute" % pathname)
+    if pathname.startswith("/Users/cvangysel/Projects/pytrec_eval/trec_eval/"):
+        pathname = pathname.split("/")[-1]
     if pathname[-1] == '/':
         raise ValueError("path '%s' cannot end with '/'" % pathname)
 
