@@ -128,8 +128,8 @@ def convert_path(pathname):
         return pathname
     if not pathname:
         return pathname
-    if pathname[0] == '/':
-        raise ValueError("path '%s' cannot be absolute" % pathname)
+    # if pathname[0] == '/':
+    #     raise ValueError("path '%s' cannot be absolute" % pathname)
     if pathname[-1] == '/':
         raise ValueError("path '%s' cannot end with '/'" % pathname)
 
